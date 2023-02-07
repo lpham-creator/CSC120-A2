@@ -1,3 +1,5 @@
+from computer import *
+from oo_resale_shop import *
 # Import a few useful containers from the typing module
 from typing import Dict, Union
 
@@ -73,6 +75,28 @@ def main():
     print("Checking inventory...")
     print_inventory()
     print("Done.\n")
+
+    comp1 = Computer("Mac Pro (Late 2013)" ,"3.5 GHc 6-Core Intel Xeon E5", 1024 , 64 ,"macOS Big Sur" , 2013 , 1500)
+    comp2 = Computer("Mac Pro (Late 2013)" ,"3.5 GHc 6-Core Intel Xeon E4", 1024 , 64 ,"macOS Big Sur" , 2013 , 1500)
+    comp3 = Computer("Mac Pro (Late 2013)" ,"3.5 GHc 6-Core Intel Xeon E3", 1024 , 64 ,"macOS Big Sur" , 2013 , 1500)
+    print(comp1)
+    print("Computer memory is", comp1.memory)
+
+    shop1 = ResaleShop({},0)
+    print("We are buying", ResaleShop.buy(shop1,comp1))
+    print(ResaleShop.update_price(shop1, 1, 3000))
+    print(ResaleShop.sell(shop1,1))
+    print(ResaleShop.print_inventory(shop1))
+    ResaleShop.buy(shop1,comp1)
+    ResaleShop.buy(shop1,comp2)
+    ResaleShop.buy(shop1,comp3)
+    print(ResaleShop.sell(shop1,1))
+    print(ResaleShop.refurbish(shop1,2,"macOS 13: Ventura (Rome)"))
+    print(ResaleShop.print_inventory(shop1))
+    print(comp2.getInfo())
+
+
+
 
 # Calls the main() function when this file is run
 if __name__ == "__main__": main()
