@@ -1,5 +1,6 @@
 from computer import Computer
 from typing import Dict, Union, Optional
+#change inventory to a list?
 class ResaleShop:
 
     inventory : Dict[int, Dict[str, Union[str, int, bool]]] = {}
@@ -12,16 +13,16 @@ class ResaleShop:
     def buy(self, x: Computer) -> None:
         self.itemID += 1 # increment itemID
         self.inventory[self.itemID] = x
-        return self.itemID
+        return x.description
 
-    def update_price(self, itemID, new_price: float):
+    def update_price(self, itemID: int, new_price: float) -> None:
         if itemID in self.inventory:
             self.inventory[itemID].price = new_price
             return None
         else: 
             print("Item", itemID, "not found. Cannot update price.")
     
-    def sell(self, itemID) -> None:
+    def sell(self, itemID:int) -> None:
         if itemID in self.inventory:
             del self.inventory[itemID]
             self.itemID -= 1
@@ -39,8 +40,8 @@ class ResaleShop:
         else:
             print("No inventory to display.")
     
-    def refurbish(self, itemID, new_os) -> None:
-        if self.itemID in self.inventory:
+    def refurbish(self, itemID:int, new_os) -> None:
+        if itemID in self.inventory:
             Computer = self.inventory[itemID] # locate the computer
             if Computer.year_made < 2000:
                 Computer.price = 0 # too old to sell, donation only

@@ -14,3 +14,4 @@ class Computer:
     
     def getInfo(self):
         return self.description, self.processor_type, self.hard_drive_capacity, self.memory, self.operating_system, self.year_made, self.price
+
