@@ -1,3 +1,10 @@
+"""
+   Filename: oo_resale_shop.py
+Description: Academic project A1 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the class written for an imagined resale shop, with all the appropriate functions.
+     Author: Linh Pham (@lpham-creator)
+       Date: 8 Feb 2023
+
+"""
 from computer import Computer
 from typing import Dict, Union, Optional
 #change inventory to a list?
@@ -18,7 +25,6 @@ class ResaleShop:
     def update_price(self, itemID: int, new_price: float) -> None:
         if itemID in self.inventory:
             self.inventory[itemID].price = new_price
-            return None
         else: 
             print("Item", itemID, "not found. Cannot update price.")
     

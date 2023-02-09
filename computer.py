@@ -1,8 +1,11 @@
+"""
+   Filename: computer.py
+Description: Academic project A1 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the class written for a computer and all the needed functions for that class.
+     Author: Linh Pham (@lpham-creator)
+       Date: 8 Feb 2023
+"""
 class Computer:
-
-    # What attributes will it need?
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
+    
     def __init__(self, description: str, processor_type: str, hard_drive_capacity: int, memory: int, operating_system: str, year_made: int, starting_price: int):
         self.description = description
         self.processor_type = processor_type

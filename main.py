@@ -1,3 +1,9 @@
+"""
+   Filename: main.py
+Description: Academic project A1 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the helper functions written by prof. Jordan and Linh Pham's testing of her own OOP programming.
+     Author: Linh Pham (@lpham-creator)
+       Date: 8 Feb 2023
+"""
 from computer import *
 from oo_resale_shop import *
 # Import a few useful containers from the typing module
@@ -76,13 +82,12 @@ def main():
     print_inventory()
     print("Done.\n")
 
-    #Testing class Computer and class ResaleShop
-
+    #---------------SEPARATION LINE----------------#
+    #Testing class Computer and class ResaleShop - Linh Pham
     comp1 = Computer("Mac Pro (Late 2013)" ,"3.5 GHc 6-Core Intel Xeon E5", 1024 , 64 ,"macOS Big Sur" , 2013 , 1500)
     comp2 = Computer("Mac Pro (Late 2013)" ,"3.5 GHc 6-Core Intel Xeon E4", 1024 , 64 ,"macOS Big Sur" , 2013 , 1500)
     comp3 = Computer("Mac Pro (Late 2013)" ,"3.5 GHc 6-Core Intel Xeon E3", 1024 , 64 ,"macOS Big Sur" , 2013 , 1500)
-    print(comp1)
-    print("Computer memory is", comp1.memory)
+    print("Computer memory is", comp1.memory, "GB")
     shop1 = ResaleShop({},0)
     print("We are buying", ResaleShop.buy(shop1, comp1))
     print(ResaleShop.update_price(shop1, 1, 3000))
