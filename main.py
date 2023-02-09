@@ -1,6 +1,6 @@
 """
    Filename: main.py
-Description: Academic project A1 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the helper functions written by prof. Jordan and Linh Pham's testing of her own OOP programming.
+Description: Academic project A2 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the helper functions written by prof. Jordan and Linh Pham's testing of her own OOP programming.
      Author: Linh Pham (@lpham-creator)
        Date: 8 Feb 2023
 """

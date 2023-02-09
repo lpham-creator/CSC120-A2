@@ -1,6 +1,6 @@
 """
    Filename: computer.py
-Description: Academic project A1 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the class written for a computer and all the needed functions for that class.
+Description: Academic project A2 for the class CSC 120: Object Oriented Programming, prof. R. Jordan Crouser. This file contains the class written for a computer and all the needed functions for that class.
      Author: Linh Pham (@lpham-creator)
        Date: 8 Feb 2023
 """
