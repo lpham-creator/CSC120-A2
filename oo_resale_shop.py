@@ -43,6 +43,11 @@ class ResaleShop:
         else: 
             print("Item", itemID, "not found. Cannot update price.")
 
+    """
+    Takes in an item_id and a new OS system, updates the OS system of the associated
+    computer if it is the inventory, prints error message otherwise
+    """
+
     def update_os(self, itemID: int, new_os: str) -> None:
         if itemID in self.inventory:
             self.inventory[itemID].os = new_os
