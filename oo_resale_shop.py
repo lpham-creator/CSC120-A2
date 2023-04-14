@@ -6,7 +6,7 @@ Description: Academic project A2 for the class CSC 120: Object Oriented Programm
 
 """
 from computer import Computer
-from typing import Dict, Union, Optional
+from typing import Dict, Union, Optional, List
 
 """ The class ResaleShop, which contains a constructor and methods, mimics the operations of a real resale store.\
 """
@@ -15,12 +15,12 @@ class ResaleShop:
     The key is an int representing the item number
     The value is another dictionary containing information about the machine
     """
-    inventory : Dict[int, Dict[str, Union[str, int, bool]]] = {}
+    inventory : List
     itemID = 0
 
     """The class constructor, which takes in the inventory and itemID as arguments
     """
-    def __init__(self, inventory: dict, itemID: int) -> None:
+    def __init__(self, inventory: list, itemID: int) -> None:
         self.inventory = inventory
         self.itemID = itemID
     
@@ -42,6 +42,12 @@ class ResaleShop:
             self.inventory[itemID].price = new_price
         else: 
             print("Item", itemID, "not found. Cannot update price.")
+
+    def update_os(self, itemID: int, new_os: str) -> None:
+        if itemID in self.inventory:
+            self.inventory[itemID].os = new_os
+        else: 
+            print("Item", itemID, "not found. Cannot update os.")
     
     """
     Takes in an item_id, removes the associated computer if it is the inventory, 
@@ -65,7 +71,7 @@ class ResaleShop:
         # For each item
             for itemID in self.inventory:
                 # Print its details
-                print(f'Item ID: {itemID} : {self.inventory[itemID].getInfo()}')
+                print(f'Item ID: {self.inventory[itemID].getInfo()}')
         else:
             print("No inventory to display.")
     
@@ -87,5 +93,7 @@ class ResaleShop:
                 Computer.operating_system = new_os # update details after installing new OS
         else:
             print("Item", itemID, "not found. Please select another item to refurbish.")
+
+
 
 
